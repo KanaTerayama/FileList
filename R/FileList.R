@@ -1,3 +1,6 @@
+#' @title Create file list
+#' @return csv file of file list
+#' @export
 FileList<-function(path){
   dir.file<-list.files(set.dir)
   dir.list<-dir.file[!grepl(".csv",dir.file)]
