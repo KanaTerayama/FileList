@@ -4,7 +4,7 @@
 #' @export
 #'
 FileList<-function(path){
-  dir.file<-list.files(set.dir)
+  dir.file<-list.files(path)
   dir.list<-dir.file[!grepl(".csv",dir.file)]
   dir.l<-length(dir.list)
 
@@ -28,6 +28,6 @@ FileList<-function(path){
     fileNDF<-data.frame(filename=file.name,
                         date=timeDF$date,
                         time=timeDF$time)
-    write.csv(fileNDF,row.names = F,paste(set.dir,"\\",dir.n,"\\",dir.n,".csv",sep=""))
+    write.csv(fileNDF,row.names = F,paste(path,"\\",dir.n,"\\",dir.n,".csv",sep=""))
   }
 }
