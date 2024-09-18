@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of FileList is to ...
+FileList creates csv files of file list in any directory.
 
 ## Installation
 
