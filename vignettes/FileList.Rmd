@@ -1,10 +1,10 @@
 ---
-title: "Create csv files of filelist in R"
+title: "Create csv files of file list in R"
 author: "Kana Terayama"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Create csv files of filelist in R}
+  %\VignetteIndexEntry{Create csv files of file list in R}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -24,7 +24,7 @@ For example,
 ```{r}
 library(FileList)
 dir<-"D:\\SAMPLES\\Dir"
-tm<-ctime
+tm<-"ctime"
 FileList(path=dir,tmstamp=tm)
 ```
 tmstamp can use 'ctime', 'atime', and 'mtime'.
