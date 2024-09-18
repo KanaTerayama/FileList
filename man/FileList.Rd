@@ -4,11 +4,11 @@
 \alias{FileList}
 \title{Create file list}
 \usage{
-FileList(path)
+FileList(path, tmstamp)
 }
 \value{
-csv file of file list in directory.
+csv file of file list in any directory
 }
 \description{
-\code{FileList} create a file list of each directory.
+\code{FileList} create a file list in any directory
 }
