@@ -10,5 +10,5 @@ FileList(path, tmstamp)
 csv file of file list in any directory
 }
 \description{
-\code{FileList} create a file list in any directory
+\code{FileList} creates file list in any directory
 }

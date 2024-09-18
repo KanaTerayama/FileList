@@ -1,5 +1,5 @@
 #' @title Create file list
-#' @description \code{FileList} create a file list in any directory
+#' @description \code{FileList} creates file list in any directory
 #' @return csv file of file list in any directory
 #' @import dplyr
 #' @importFrom dplyr select

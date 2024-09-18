@@ -9,7 +9,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r setup, include = FALSE}
+```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -18,13 +18,15 @@ knitr::opts_chunk$set(
 
 FileList is an R package that creates csv files of file list in any directories.
 
+```{r setup}
+library(FileList)
+```
+
+
 ## Create csv files of file list
 
 For example,
 ```{r}
-library(FileList)
-dir<-"D:\\SAMPLES\\Dir"
-tm<-"ctime"
-FileList(path=dir,tmstamp=tm)
+FileList(path,tmstamp="mtime")
 ```
-tmstamp can use 'ctime', 'atime', and 'mtime'.
+
