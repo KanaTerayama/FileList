@@ -1,11 +1,10 @@
 Package: FileList
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Create File List
 Version: 0.0.1
 Author: Kana Terayama
 Maintainer: Kana Terayama <kana@u-ga.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: This package creates csv files of file list in any directory.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
