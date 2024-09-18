@@ -10,9 +10,9 @@ FileList<-function(path){
 
   for (i in 1:dir.l) {
     dir.n<-dir.list[i]
-    file.name<-list.files(paste(set.dir,"\\",dir.n,sep=""))
+    file.name<-list.files(paste(path,"\\",dir.n,sep=""))
     file.name<-file.name[!grepl(".csv",file.name)]
-    file.DF<-file.info(paste(set.dir,"\\",dir.n,"\\",file.name,sep=""))
+    file.DF<-file.info(paste(path,"\\",dir.n,"\\",file.name,sep=""))
     datetime<-as.character(file.DF$ctime)
     datetime2<-strsplit(datetime," ")
     Tm.L<-length(datetime2)
