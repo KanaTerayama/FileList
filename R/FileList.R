@@ -1,7 +1,8 @@
 #' @title Create file list
-#' @description \code{FileList} create a file list of each directory.
-#' @return csv file of file list in directory.
+#' @description \code{FileList} create a file list in any directory
+#' @return csv file of file list in any directory
 #' @import dplyr
+#' @importFrom dplyr select
 #' @export
 #'
 FileList<-function(path,tmstamp){
