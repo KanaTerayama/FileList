@@ -3,7 +3,8 @@
 #' @return csv file of file list in directory.
 #' @export
 #'
-FileList<-function(path){
+FileList<-function(path,tmstamp){
+  tmstamp=c("ctime")
   dir.file<-list.files(path)
   dir.list<-dir.file[!grepl(".csv",dir.file)]
   dir.l<-length(dir.list)
@@ -13,8 +14,8 @@ FileList<-function(path){
     file.name<-list.files(paste(path,"\\",dir.n,sep=""))
     file.name<-file.name[!grepl(".csv",file.name)]
     file.DF<-file.info(paste(path,"\\",dir.n,"\\",file.name,sep=""))
-    datetime<-as.character(file.DF$ctime)
-    datetime2<-strsplit(datetime," ")
+    datetime<-dplyr::select(file.DF,tmstamp)
+    datetime2<-strsplit(as.character(datetime[,1])," ")
     Tm.L<-length(datetime2)
     timelist=list()
     for (tm in 1:Tm.L) {
@@ -30,4 +31,5 @@ FileList<-function(path){
                         time=timeDF$time)
     write.csv(fileNDF,row.names = F,paste(path,"\\",dir.n,"\\",dir.n,".csv",sep=""))
   }
+  print("csv files were created")
 }
