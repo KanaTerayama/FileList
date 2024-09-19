@@ -5,7 +5,7 @@
 #' @importFrom dplyr select
 #' @export
 #'
-FileList<-function(path=gsub("/","\\\\",getwd()),tmstamp){
+FileList<-function(path,tmstamp){
   tmstamp=c("ctime")
   dir.file<-list.files(path)
   dir.list<-dir.file[!grepl(".csv",dir.file)]
