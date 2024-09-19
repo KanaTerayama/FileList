@@ -6,7 +6,6 @@
 #' @export
 #'
 FileList<-function(path,tmstamp){
-  tmstamp=c("ctime")
   dir.file<-list.files(path)
   dir.list<-dir.file[!grepl(".csv",dir.file)]
   dir.l<-length(dir.list)
