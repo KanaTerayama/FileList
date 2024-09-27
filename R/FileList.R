@@ -16,12 +16,9 @@ FileList<-function(path,tmstamp){
     file.name<-list.files(paste(path,"\\",dir.n,sep=""))
     file.name<-file.name[!grepl(".csv",file.name)]
     file.DF<-file.info(paste(path,"\\",dir.n,"\\",file.name,sep=""))%>%
-      separate(tmstamp,c("date","time"),sep=" ")%>%
-      mutate(filename=file.name,date=date,time=time)%>%
-      select(filename,date,time)
+      rename(date=tmstamp)
     fileNDF<-data.frame(filename=file.name,
-                        date=file.DF$date,
-                        time=file.DF$time)
+                        date=file.DF$date)
     write.csv(fileNDF,row.names = F,paste(path,"\\",dir.n,"\\",dir.n,".csv",sep=""))
   }
   print("csv files were created")
