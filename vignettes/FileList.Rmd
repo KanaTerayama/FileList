@@ -16,17 +16,21 @@ knitr::opts_chunk$set(
 )
 ```
 
-FileList is an R package that creates csv files of file list in any directories.
+FileList is an R package that creates csv files of file lists in any directories to manage camera trap data (videos or images). If you have some images (or videos) collected at several study sites on the same projects, this package will help you to create file lists more easily.
 
 ```{r setup}
 library(FileList)
 ```
 
-
 ## Create csv files of file list
-
-For example,
+This package assumes a hierarchical structure, where the project folder has several folders containing the camera trap data.
+For example, there are 3 study sites (Site1, Site2 and Site3) on the project name 'TEST-Project'. The folder named "TEST-Project" has 3 folders from each study site and 3 folders (named Site1, Site2 and Site3) with some camera trap data. The hierarchical structure such as ~/data/TEST-Project/Site1/img001.jpg, ~/data/TEST-Project/Site2/img021.jpg and ~/data/TEST-Project/Site3/img033.jpg.
+You should specify "path" as the file path of the top folder that contains multiple folders. Like this;
 ```{r}
-FileList(path,tmstamp="mtime")
+dir<-"~/data/TEST-Project"
 ```
+You can use three "tmstamps"; "atime" is the access timestamp, "ctime" is the change timestamp and "mtime" is the modified timestamp.
 
+```{r}
+FileList(path=dir,tmstamp="ctime")
+```
