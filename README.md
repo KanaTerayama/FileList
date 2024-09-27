@@ -23,7 +23,7 @@ This is a basic example which shows you how to solve a common problem:
 library(FileList)
 ## basic example code
 #path is the file path to the directory containing the directory for which you want to create a file list
-#You can use tistamp as "ctime", "mtime", and "atime"
+#You can use timestamp as "ctime", "mtime", and "atime"
 FileList(path,tmstamp="mtime")
 ```
 
