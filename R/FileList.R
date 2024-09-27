@@ -2,7 +2,7 @@
 #' @description \code{FileList} creates file list in any directory
 #' @return csv file of file list in any directory
 #' @import dplyr
-#' @importFrom dplyr select
+#' @importFrom dplyr rename
 #' @export
 #'
 FileList<-function(path,tmstamp){
