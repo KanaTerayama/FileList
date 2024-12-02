@@ -6,8 +6,16 @@
 \usage{
 FileList(path, tmstamp)
 }
+\arguments{
+\item{path}{character: the path to the directories containing folders of data}
+
+\item{tmstamp}{character: date field to return, which should be the date for
+which the data was taken; either "mtime" (date
+modified), "ctime" (last status change), or "atime" (last access) -- this
+value should usually be "mtime"}
+}
 \value{
-csv file of file list in any directory
+csv file of file list in the input directory
 }
 \description{
 \code{FileList} creates file list in any directory
